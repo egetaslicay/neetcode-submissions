@@ -1,0 +1,26 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+    
+    int left = 0;
+    int right = numbers.length-1; 
+    
+    int res[] = new int[2];
+    // one indexed so add one to your answers at the end !!!!
+    // make sure you check for duplicate
+
+    while(left < right){ 
+        if(numbers[left] + numbers[right] > target) { 
+            right--; 
+        } else if(numbers[left] + numbers[right] < target){ 
+            left++; 
+        } else { 
+            res[0] = left+1;
+            res[1] = right+1;
+            return res;
+        }
+    }
+
+    return new int[]{};
+
+    }
+}
