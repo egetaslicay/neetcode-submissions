@@ -1,0 +1,18 @@
+class Pet:
+    def __init__(self, name: str):
+        self.name = name
+        self.hunger = 3
+
+    def feed(self):
+        self.hunger += 1 
+        print(self.name + " has been fed")
+        print(self.name + "'s hunger level: " + str(self.hunger))
+
+# Create a pet
+my_pet = Pet("Fluffy")
+
+# TODO: Feed the pet three times
+
+my_pet.feed()
+my_pet.feed()
+my_pet.feed()
